@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .primary-btn{
+      @apply text-white bg-gradient-to-r from-slate-600 via-slate-800 to-slate-900 transition duration-200
+      py-2 rounded-md px-4 hover:bg-gradient-to-br border-solid border-slate-900 border-[1px] ;
+  }
+  .secondary-btn{
+      @apply text-white border-solid border-white border-[1px] transition duration-200
+      py-2 rounded-md px-4 hover:bg-slate-700/30;
+  }
+ 
+
+}
