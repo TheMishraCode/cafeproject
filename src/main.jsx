@@ -60,7 +60,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>  
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter basename='/cafeproject'>
    <Routes>
     <Route path='/' element={<App/>}>
     <Route index element={<Hero/>}/>
