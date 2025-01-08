@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Hero from './components/Hero/Hero.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { BrowserRouter, createBrowserRouter, RouterProvider, Routes, Route } from 'react-router'
 import About from './components/About/About.jsx'
 import OurServices from './components/OurServices/OurServices.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -60,7 +60,18 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>  
-    <RouterProvider router={router}/>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+   <Routes>
+    <Route path='/' element={<App/>}>
+    <Route index element={<Hero/>}/>
+    <Route path="contact" element={<Contact />} />
+    <Route path="about" element={<About />} />
+    <Route path="ourservices" element={<OurServices />} />
+    <Route path="menu" element={<Toplist />} />
+    <Route path="cart" element={<Cart />} />
+    </Route>
+   </Routes>
+      </BrowserRouter>
     </CartProvider>
   </StrictMode>
 )
