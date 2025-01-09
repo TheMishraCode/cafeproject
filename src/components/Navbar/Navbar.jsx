@@ -95,11 +95,11 @@ const Navbar = () => {
                         <GiHamburgerMenu onClick={handleButtonToggle}
                             className='text-white text-xl md:hidden' />
                     </NavLink>
+                    <NavLink to="/cart">
+                    <FaCartShopping className='text-white text-xl hover:text-amber-500 
+                    hover:cursor-pointer'/>
+                    </NavLink>
                 </div>
-                <NavLink to="/cart">
-                <FaCartShopping className='text-white text-xl hover:text-amber-500 
-                hover:cursor-pointer'/>
-                </NavLink>
             
             {/* mobile sidebar */}
            <AnimatePresence>
